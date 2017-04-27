@@ -5,7 +5,8 @@ class Login extends Component {
     constructor() {
         super()
         this.state = {
-            username: ''
+            username: '',
+            password: ''
         }
     }
 
@@ -17,7 +18,7 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        login(this.state.username)
+        login(this.state.username, this.state.password)
         this.props.history.push('/chatroom')
     }
 
@@ -25,7 +26,9 @@ class Login extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input placeholder="Enter your Username" name="username" onChange={this.handleChange} />
+                    <input placeholder="Enter your Username" type="text" name="username" onChange={this.handleChange} />
+                    <input placeholder="Enter your password" type="password" name="password" onChange={this.handleChange} />
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         )

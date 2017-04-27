@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "font-awesome": "^4.7.0",
+    "js-cookie": "^2.1.4",
     "material-ui": "^0.17.4",
     "normalize.css": "^6.0.0",
     "react": "^15.5.4",

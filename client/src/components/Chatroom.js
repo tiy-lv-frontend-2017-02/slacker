@@ -5,6 +5,7 @@ import styles from './Chatroom.styles'
 import {connect} from 'react-redux'
 import moment from 'moment'
 import {addMessage} from '../api/messaging'
+import {checkLogin} from '../api/messaging'
 
 class Chatroom extends Component {
     constructor() {
@@ -36,12 +37,6 @@ class Chatroom extends Component {
         this.setState({
             message: ''
         })
-    }
-
-    componentWillMount() {
-        if (!this.props.username) {
-            this.props.history.push('/')
-        }
     }
 
     componentWillUpdate() {
